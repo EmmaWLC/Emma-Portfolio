@@ -59,7 +59,6 @@ section {
     font-size: 10vw;
     line-height: 14vw;
     pointer-events: none;
-    margin-left: 1vw;
     margin-top: 6vw;
 
 
@@ -82,9 +81,10 @@ section {
 
 .section2 {
     background: #102e43;
+    position: relative;
     .work-title {
         font-size: 8vw;
-        color: #F6F2D4;
+        color: #22577E;
         font-family: 'Playfair Display SC', serif;
         writing-mode: vertical-lr;
         text-orientation: mixed;
@@ -92,38 +92,89 @@ section {
         padding-bottom: 3vw;
     }
 
-    .work-cube {
-        width: 40vw;
-        height: 10vw;
-        background: #000;
+    .work-detail-wrap {
+        flex-wrap: nowrap;
     }
 
+   
+   
+
+
+    .work-cube {
+        position: absolute;
+        bottom: 8vh;
+        right: 0;
+        width: 60vw;
+        height: 60vh;
+        background: #fff;
+
+        .work1-title-wrap {
+            position: relative;
+
+            .work1-title {
+                position: absolute;
+                right: 1vw;
+                top: -25vw;
+                color: #F6F2D4;
+                p  {
+                    text-align: right;
+                    font-size: 15vw;
+                    line-height:14vw;
+                    font-family: 'Playfair Display SC', serif;
+                }
+            }
+
+            
+            
+        }
+       
+
+        
+    }
+
+    .work-detail {
+        position: absolute;
+        bottom: 0;
+
+        p {
+            font-family: 'Lato', sans-serif;
+            font-size: 2vw;
+            line-height: 1vw;
+            font-weight: 300;
+            color: rgb(255, 255, 255);
+        }
+    }
+    
 
 }
 
 .section3 {
     display: flex;
     width: 100vw;
+    position: relative;
     .contact {
         flex-wrap: wrap;
         margin-top: auto;
         height: 100%;
+        width: 100%;
         .wrap {
             flex-wrap: wrap;
+            width: 100%;
+            transform: translateY(-15%);
         }
         .contact-title {
             font-family: 'Playfair Display SC', serif;
-            font-size: 24vw;
-            line-height: 24vw;
+            font-size: 18vw;
+            line-height: 20vw;
             pointer-events: none;
             position: relative;
             color:transparent;
             -webkit-text-stroke-color: #22577E;
             -webkit-text-stroke-width: 1px;
-            padding-top: 15vw;
         }
         .contact-info {
             flex-wrap: wrap;
+            margin-top: 8vw;
             a {
                 text-decoration: none;
             }
@@ -152,18 +203,22 @@ section {
                 margin-bottom: 0;
                 color: #22577E;
             }
-        }
-
-        .copyright-wrap {
-            padding-bottom: 3vw;
-            .copyright {
-                font-size: 1vw;
-                color: #22577E;
-                font-family: 'Lato', sans-serif;
-                font-weight: normal;
-            }     
-        }
+        }  
     }
+    
+    .copyright {
+        position: absolute;
+        bottom: 7vw;
+        right: 4vw;
+        p {
+            font-size: 1vw;
+            color: #22577E;
+            font-family: 'Lato', sans-serif;
+            font-weight: normal;
+        }
+        height: 4vw;
+        
+    }    
 }
 
 .hover-effect-img {
@@ -244,6 +299,11 @@ section {
         justify-content: space-between;
         
         .contact {
+            .wrap {
+                flex-wrap: wrap;
+                width: 100%;
+                transform: translateY(0%);
+            }
             width: 100vw;
             .contact-title {
                 font-size: 12vw;
@@ -264,6 +324,7 @@ section {
             .contact-info {
                 transform: translateY(-20%);
                 flex-wrap: wrap;
+                margin-top: 0;
 
                 .email {
                     width: 100%;
@@ -288,10 +349,12 @@ section {
                 }
             }
     
-            .copyright-wrap {
-                padding: 0vw 4vw 2vw;
-            }
+           
         }
+
+        .copyright {
+            bottom: 0vw;            
+        }    
         
     }
 

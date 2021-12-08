@@ -60,7 +60,6 @@ section {
   font-size: 10vw;
   line-height: 14vw;
   pointer-events: none;
-  margin-left: 1vw;
   margin-top: 6vw;
 }
 
@@ -82,11 +81,12 @@ section {
 
 .section2 {
   background: #102e43;
+  position: relative;
 }
 
 .section2 .work-title {
   font-size: 8vw;
-  color: #F6F2D4;
+  color: #22577E;
   font-family: 'Playfair Display SC', serif;
   -webkit-writing-mode: vertical-lr;
       -ms-writing-mode: tb-lr;
@@ -97,10 +97,49 @@ section {
   padding-bottom: 3vw;
 }
 
+.section2 .work-detail-wrap {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
 .section2 .work-cube {
-  width: 40vw;
-  height: 10vw;
-  background: #000;
+  position: absolute;
+  bottom: 8vh;
+  right: 0;
+  width: 60vw;
+  height: 60vh;
+  background: #fff;
+}
+
+.section2 .work-cube .work1-title-wrap {
+  position: relative;
+}
+
+.section2 .work-cube .work1-title-wrap .work1-title {
+  position: absolute;
+  right: 1vw;
+  top: -25vw;
+  color: #F6F2D4;
+}
+
+.section2 .work-cube .work1-title-wrap .work1-title p {
+  text-align: right;
+  font-size: 15vw;
+  line-height: 14vw;
+  font-family: 'Playfair Display SC', serif;
+}
+
+.section2 .work-detail {
+  position: absolute;
+  bottom: 0;
+}
+
+.section2 .work-detail p {
+  font-family: 'Lato', sans-serif;
+  font-size: 2vw;
+  line-height: 1vw;
+  font-weight: 300;
+  color: white;
 }
 
 .section3 {
@@ -108,6 +147,7 @@ section {
   display: -ms-flexbox;
   display: flex;
   width: 100vw;
+  position: relative;
 }
 
 .section3 .contact {
@@ -115,28 +155,32 @@ section {
       flex-wrap: wrap;
   margin-top: auto;
   height: 100%;
+  width: 100%;
 }
 
 .section3 .contact .wrap {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  width: 100%;
+  -webkit-transform: translateY(-15%);
+          transform: translateY(-15%);
 }
 
 .section3 .contact .contact-title {
   font-family: 'Playfair Display SC', serif;
-  font-size: 24vw;
-  line-height: 24vw;
+  font-size: 18vw;
+  line-height: 20vw;
   pointer-events: none;
   position: relative;
   color: transparent;
   -webkit-text-stroke-color: #22577E;
   -webkit-text-stroke-width: 1px;
-  padding-top: 15vw;
 }
 
 .section3 .contact .contact-info {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-top: 8vw;
 }
 
 .section3 .contact .contact-info a {
@@ -168,11 +212,14 @@ section {
   color: #22577E;
 }
 
-.section3 .contact .copyright-wrap {
-  padding-bottom: 3vw;
+.section3 .copyright {
+  position: absolute;
+  bottom: 7vw;
+  right: 4vw;
+  height: 4vw;
 }
 
-.section3 .contact .copyright-wrap .copyright {
+.section3 .copyright p {
   font-size: 1vw;
   color: #22577E;
   font-family: 'Lato', sans-serif;
@@ -256,6 +303,13 @@ section {
   .section3 .contact {
     width: 100vw;
   }
+  .section3 .contact .wrap {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
   .section3 .contact .contact-title {
     font-size: 12vw;
     line-height: 13vw;
@@ -276,6 +330,7 @@ section {
             transform: translateY(-20%);
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    margin-top: 0;
   }
   .section3 .contact .contact-info .email {
     width: 100%;
@@ -296,8 +351,8 @@ section {
     line-height: 3vw;
     max-width: 70vw;
   }
-  .section3 .contact .copyright-wrap {
-    padding: 0vw 4vw 2vw;
+  .section3 .copyright {
+    bottom: 0vw;
   }
 }
 /*# sourceMappingURL=main.css.map */
