@@ -37,7 +37,6 @@ let textWrapper = document.querySelector('.title-1')
         displacementImage: 'https://assets.codepen.io/2621168/dis.png'
     });
 
-    let title = document.querySelector('.container');
     let img1 = document.querySelector('.work-img1');
     let img2 = document.querySelector('.work-img2');
     let img3 = document.querySelector('.work-img3');
@@ -51,15 +50,22 @@ let textWrapper = document.querySelector('.title-1')
         x: 0,
         y: 0
     }
+    let cursor3 = {
+        x: 0,
+        y: 0
+    }
 
     document.addEventListener('mousemove', (e) => {
         cursor.x = -e.clientX * .1;
         cursor.y = -e.clientY * .1;
-        cursor2.x = -(e.clientX-screen.width) * .1; 
+        cursor2.x = -(e.clientX - $(window).width()) * .1; 
+        cursor2.y = -e.clientY * .1;
+        cursor3.x = -e.clientX * .1;
+        cursor3.y = -e.clientY * .1;
         //img is on the left side, let the mouse reference point shift to right side
 
         img1.style.transform = `translate(${cursor.x}px, ${cursor.y}px)`;
-        // img2.style.transform = `translate(${cursor2.x}px, ${cursor.y}px)`;
-        img3.style.transform = `translate(${cursor.x}px, ${cursor.y}px)`;
+        img2.style.transform = `translate(${cursor2.x}px, ${cursor2.y}px)`;
+        img3.style.transform = `translate(${cursor3.x}px, ${cursor3.y}px)`;
         // cursorCircle.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`
     })
