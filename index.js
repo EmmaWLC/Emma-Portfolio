@@ -15,21 +15,39 @@ let textWrapper = document.querySelector('.title-1')
     tl.to('.title-3 .letter', {opacity: 1, y: '0', clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',stagger: '.03'}, "-=.7")
     tl.from('p', {opacity: 0, y: '-50px'}, "-=.7")
 
-    // tl.to('.hover-effect-img', {clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)', ease: Back.easeOut.config(1.7), duration: .75}, "-=.5")
-
-    // var myAnimation = new hoverEffect({
-    //     parent: document.querySelector('.hover-effect-img'),
-    //     intensity: 0.3,
-    //     image1: 'https://assets.codepen.io/2621168/abstract1.jpg',
-    //     image2: 'https://assets.codepen.io/2621168/abstract2.jpg',
-    //     displacementImage: 'https://assets.codepen.io/2621168/dis.png'
-    // });
+    var myAnimation = new hoverEffect({
+        parent: document.querySelector('.work-img1'),
+        intensity: 0.3,
+        image1: 'https://assets.codepen.io/2621168/abstract1.jpg',
+        image2: 'https://assets.codepen.io/2621168/abstract2.jpg',
+        displacementImage: 'https://assets.codepen.io/2621168/dis.png'
+    });
+    var myAnimation = new hoverEffect({
+        parent: document.querySelector('.work-img2'),
+        intensity: 0.3,
+        image1: 'https://assets.codepen.io/2621168/abstract1.jpg',
+        image2: 'https://assets.codepen.io/2621168/abstract2.jpg',
+        displacementImage: 'https://assets.codepen.io/2621168/dis.png'
+    });
+    var myAnimation = new hoverEffect({
+        parent: document.querySelector('.work-img3'),
+        intensity: 0.3,
+        image1: 'https://assets.codepen.io/2621168/abstract1.jpg',
+        image2: 'https://assets.codepen.io/2621168/abstract2.jpg',
+        displacementImage: 'https://assets.codepen.io/2621168/dis.png'
+    });
 
     let title = document.querySelector('.container');
-    // let img = document.querySelector('.hover-effect-img');
+    let img1 = document.querySelector('.work-img1');
+    let img2 = document.querySelector('.work-img2');
+    let img3 = document.querySelector('.work-img3');
     let cursorCircle = document.querySelector('.cursor');
 
     let cursor = {
+        x: 0,
+        y: 0
+    }
+    let cursor2 = {
         x: 0,
         y: 0
     }
@@ -37,7 +55,11 @@ let textWrapper = document.querySelector('.title-1')
     document.addEventListener('mousemove', (e) => {
         cursor.x = -e.clientX * .1;
         cursor.y = -e.clientY * .1;
+        cursor2.x = -(e.clientX-screen.width) * .1; 
+        //img is on the left side, let the mouse reference point shift to right side
 
-        // img.style.transform = `translate(${cursor.x}px, ${cursor.y}px)`;
-        cursorCircle.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`
+        img1.style.transform = `translate(${cursor.x}px, ${cursor.y}px)`;
+        // img2.style.transform = `translate(${cursor2.x}px, ${cursor.y}px)`;
+        img3.style.transform = `translate(${cursor.x}px, ${cursor.y}px)`;
+        // cursorCircle.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`
     })

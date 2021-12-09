@@ -19,7 +19,6 @@ body {
 }
 
 nav {
-  background: #F6F2D4;
   position: absolute;
   width: 100vw;
   height: 3vw;
@@ -84,7 +83,7 @@ section {
   position: relative;
 }
 
-.section2 .work-title {
+.section2 .work-section-title {
   font-size: 8vw;
   color: #22577E;
   font-family: 'Playfair Display SC', serif;
@@ -97,48 +96,86 @@ section {
   padding-bottom: 3vw;
 }
 
-.section2 .work-detail-wrap {
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-}
-
 .section2 .work-cube {
   position: absolute;
   bottom: 8vh;
-  right: 0;
+  right: 4vw;
   width: 60vw;
   height: 60vh;
-  background: #fff;
 }
 
-.section2 .work-cube .work1-title-wrap {
+.section2 .work-cube .work-title-wrap {
   position: relative;
+  z-index: 1;
 }
 
-.section2 .work-cube .work1-title-wrap .work1-title {
+.section2 .work-cube .work-title-wrap .work-title {
   position: absolute;
-  right: 1vw;
-  top: -25vw;
+  right: 0;
+  top: -24vw;
+  max-width: 90vw;
   color: #F6F2D4;
 }
 
-.section2 .work-cube .work1-title-wrap .work1-title p {
+.section2 .work-cube .work-title-wrap .work-title p {
   text-align: right;
   font-size: 15vw;
-  line-height: 14vw;
+  line-height: 12vw;
   font-family: 'Playfair Display SC', serif;
+}
+
+.section2 .work-cube .work-img {
+  overflow: hidden;
+  bottom: 8vh;
+  right: 0vw;
+  width: 60vw;
+  height: 60vh;
 }
 
 .section2 .work-detail {
   position: absolute;
-  bottom: 0;
+  bottom: 8vh;
+  left: 4vw;
 }
 
 .section2 .work-detail p {
   font-family: 'Lato', sans-serif;
-  font-size: 2vw;
-  line-height: 1vw;
+  font-size: 1.2vw;
+  line-height: 1.2vw;
   font-weight: 300;
+  text-align: left;
+  color: white;
+}
+
+.section2 .work-cube2-1 {
+  left: 4vw;
+}
+
+.section2 .work-cube2-1 .work-title-wrap {
+  position: relative;
+  z-index: 1;
+}
+
+.section2 .work-cube2-1 .work-title-wrap .work-title2-1 {
+  left: 0;
+}
+
+.section2 .work-cube2-1 .work-title-wrap .work-title2-1 p {
+  text-align: left;
+}
+
+.section2 .work-detail2-1 {
+  position: absolute;
+  bottom: 8vh;
+  right: 4vw;
+}
+
+.section2 .work-detail2-1 p {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.2vw;
+  line-height: 1.2vw;
+  font-weight: 300;
+  text-align: right;
   color: white;
 }
 
@@ -245,6 +282,7 @@ section {
   border: 1px solid rgba(0, 0, 0, 0.4);
   margin-left: -1.5em;
   margin-top: -1.5em;
+  z-index: 3;
 }
 
 .letter {
@@ -254,10 +292,6 @@ section {
           clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   -webkit-transform: translateY(-50px);
           transform: translateY(-50px);
-}
-
-.img:hover {
-  opacity: .5;
 }
 
 @media (min-width: 578px) {
@@ -294,6 +328,45 @@ section {
     line-height: 4.5vw;
     max-width: 70vw;
     font-weight: 300;
+  }
+  .section2 .work-section-title {
+    font-size: 5vw;
+    padding-bottom: 3vw;
+  }
+  .section2 .work-cube .work-title-wrap .work-title {
+    top: -12vw;
+  }
+  .section2 .work-cube .work-title-wrap .work-title p {
+    font-size: 8vw;
+    line-height: 6vw;
+  }
+  .section2 .work-cube .work-img {
+    overflow: hidden;
+    bottom: 8vh;
+    right: 0vw;
+    width: 60vw;
+    height: 60vh;
+  }
+  .section2 .work-detail {
+    right: 68vw;
+  }
+  .section2 .work-detail p {
+    text-align: right;
+    font-size: 1.2vw;
+    line-height: 1.2vw;
+  }
+  .section2 .work-detail2-1 {
+    position: absolute;
+    bottom: 8vh;
+    left: 68vw;
+  }
+  .section2 .work-detail2-1 p {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2vw;
+    line-height: 1.2vw;
+    font-weight: 300;
+    text-align: left;
+    color: white;
   }
   .section3 {
     -webkit-box-pack: justify;
