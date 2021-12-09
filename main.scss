@@ -312,7 +312,8 @@ section {
         }
         .work-cube{
             .work-title {
-                z-index: 4;
+                position: relative;
+                z-index: 5;
                 transform: translateX(3vw);
                 p  {
                     font-size: 6vw;

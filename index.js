@@ -60,8 +60,8 @@ let textWrapper = document.querySelector('.title-1')
         cursor.y = -e.clientY * .1;
         //img is on the left side, let the mouse reference point shift to right side
 
-        img1.style.transform = `translate(${cursor.x}px, ${cursor.y}px)`;
-        img2.style.transform = `translate(${cursor.x}px, ${cursor.y}px)`;
-        img3.style.transform = `translate(${cursor.x}px, ${cursor.y}px)`;
+        // img1.style.transform = `translate(${cursor.x}px, ${cursor.y}px)`;
+        // img2.style.transform = `translate(${cursor.x}px, ${cursor.y}px)`;
+        // img3.style.transform = `translate(${cursor.x}px, ${cursor.y}px)`;
         // cursorCircle.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`
     })
