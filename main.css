@@ -8,6 +8,11 @@ body {
   margin: 0;
 }
 
+canvas {
+  margin: 0;
+  display: block;
+}
+
 .scroll-to-next-part {
   width: 100vw;
   height: 100vh;
@@ -60,12 +65,13 @@ section {
   line-height: 14vw;
   pointer-events: none;
   margin-top: 6vw;
+  max-width: 90vw;
 }
 
 .title .title-2, .title .title-3 {
   position: relative;
   z-index: 2;
-  max-width: 70vw;
+  max-width: 75vw;
 }
 
 .title p {
@@ -83,7 +89,13 @@ section {
   position: relative;
 }
 
+.section2 .work-wrap {
+  width: 100%;
+  height: 100%;
+}
+
 .section2 .work-section-title {
+  position: absolute;
   font-size: 8vw;
   color: #22577E;
   font-family: 'Playfair Display SC', serif;
@@ -93,90 +105,55 @@ section {
   text-orientation: mixed;
   -webkit-transform: rotate(-180deg);
           transform: rotate(-180deg);
-  padding-bottom: 3vw;
+  top: 6vw;
 }
 
 .section2 .work-cube {
-  position: absolute;
-  bottom: 8vh;
-  right: 4vw;
-  width: 60vw;
-  height: 60vh;
+  width: 100%;
+  height: 100%;
 }
 
-.section2 .work-cube .work-title-wrap {
-  position: relative;
-  z-index: 1;
+.section2 .work-cube .work-title {
+  right: 0vw;
+  -webkit-transform: translateY(-30%);
+          transform: translateY(-30%);
 }
 
-.section2 .work-cube .work-title-wrap .work-title {
-  position: absolute;
-  right: 0;
-  top: -24vw;
-  max-width: 90vw;
+.section2 .work-cube .work-title p {
+  z-index: 5;
+  text-align: right;
+  font-size: 10vw;
+  line-height: 4vw;
+  font-family: 'Playfair Display SC', serif;
   color: #F6F2D4;
 }
 
-.section2 .work-cube .work-title-wrap .work-title p {
+.section2 .work-cube .work-detail p {
+  z-index: 5;
+  font-family: 'Lato', sans-serif;
+  font-size: 1vw;
+  line-height: 5vw;
+  font-weight: 300;
   text-align: right;
-  font-size: 15vw;
-  line-height: 12vw;
-  font-family: 'Playfair Display SC', serif;
+  padding-right: 3vw;
+  color: white;
+  max-width: 20vw;
 }
 
 .section2 .work-cube .work-img {
   overflow: hidden;
-  bottom: 8vh;
   right: 0vw;
   width: 60vw;
-  height: 60vh;
-}
-
-.section2 .work-detail {
-  position: absolute;
-  bottom: 8vh;
-  left: 4vw;
-}
-
-.section2 .work-detail p {
-  font-family: 'Lato', sans-serif;
-  font-size: 1.2vw;
-  line-height: 1.2vw;
-  font-weight: 300;
-  text-align: left;
-  color: white;
-}
-
-.section2 .work-cube2-1 {
-  left: 4vw;
-}
-
-.section2 .work-cube2-1 .work-title-wrap {
+  height: 80vw;
+  background: #000;
   position: relative;
-  z-index: 1;
 }
 
-.section2 .work-cube2-1 .work-title-wrap .work-title2-1 {
-  left: 0;
-}
-
-.section2 .work-cube2-1 .work-title-wrap .work-title2-1 p {
-  text-align: left;
-}
-
-.section2 .work-detail2-1 {
-  position: absolute;
-  bottom: 8vh;
-  right: 4vw;
-}
-
-.section2 .work-detail2-1 p {
-  font-family: 'Lato', sans-serif;
-  font-size: 1.2vw;
-  line-height: 1.2vw;
-  font-weight: 300;
-  text-align: right;
-  color: white;
+.section2 .work-cube .work-img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .section3 {
@@ -331,42 +308,27 @@ section {
   }
   .section2 .work-section-title {
     font-size: 5vw;
-    padding-bottom: 3vw;
+    top: 3vw;
   }
-  .section2 .work-cube .work-title-wrap .work-title {
-    top: -12vw;
+  .section2 .work-cube .work-title {
+    z-index: 4;
+    -webkit-transform: translateX(3vw);
+            transform: translateX(3vw);
   }
-  .section2 .work-cube .work-title-wrap .work-title p {
-    font-size: 8vw;
-    line-height: 6vw;
+  .section2 .work-cube .work-title p {
+    font-size: 6vw;
+    line-height: 5vw;
   }
   .section2 .work-cube .work-img {
-    overflow: hidden;
-    bottom: 8vh;
-    right: 0vw;
     width: 60vw;
-    height: 60vh;
+    height: 30vw;
+    z-index: 0;
   }
-  .section2 .work-detail {
-    right: 68vw;
-  }
-  .section2 .work-detail p {
+  .section2 .work-cube .work-detail p {
     text-align: right;
     font-size: 1.2vw;
     line-height: 1.2vw;
-  }
-  .section2 .work-detail2-1 {
-    position: absolute;
-    bottom: 8vh;
-    left: 68vw;
-  }
-  .section2 .work-detail2-1 p {
-    font-family: 'Lato', sans-serif;
-    font-size: 1.2vw;
-    line-height: 1.2vw;
-    font-weight: 300;
-    text-align: left;
-    color: white;
+    min-width: 21vw;
   }
   .section3 {
     -webkit-box-pack: justify;

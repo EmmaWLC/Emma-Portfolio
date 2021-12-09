@@ -15,27 +15,27 @@ let textWrapper = document.querySelector('.title-1')
     tl.to('.title-3 .letter', {opacity: 1, y: '0', clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',stagger: '.03'}, "-=.7")
     tl.from('p', {opacity: 0, y: '-50px'}, "-=.7")
 
-    var myAnimation = new hoverEffect({
-        parent: document.querySelector('.work-img1'),
-        intensity: 0.3,
-        image1: 'https://assets.codepen.io/2621168/abstract1.jpg',
-        image2: 'https://assets.codepen.io/2621168/abstract2.jpg',
-        displacementImage: 'https://assets.codepen.io/2621168/dis.png'
-    });
-    var myAnimation = new hoverEffect({
-        parent: document.querySelector('.work-img2'),
-        intensity: 0.3,
-        image1: 'https://assets.codepen.io/2621168/abstract1.jpg',
-        image2: 'https://assets.codepen.io/2621168/abstract2.jpg',
-        displacementImage: 'https://assets.codepen.io/2621168/dis.png'
-    });
-    var myAnimation = new hoverEffect({
-        parent: document.querySelector('.work-img3'),
-        intensity: 0.3,
-        image1: 'https://assets.codepen.io/2621168/abstract1.jpg',
-        image2: 'https://assets.codepen.io/2621168/abstract2.jpg',
-        displacementImage: 'https://assets.codepen.io/2621168/dis.png'
-    });
+    // var myAnimation = new hoverEffect({
+    //     parent: document.querySelector('.work-img1'),
+    //     intensity: 0.3,
+    //     image1: '/img/test1.jpg',
+    //     image2: './img/shopline.png',
+    //     displacementImage: './img/switch1.png'
+    // });
+    // var myAnimation = new hoverEffect({
+    //     parent: document.querySelector('.work-img2'),
+    //     intensity: 0.3,
+    //     image1: './img/here.jpg',
+    //     image2: './img/here2.jpg',
+    //     displacementImage: 'https://assets.codepen.io/2621168/dis.png'
+    // });
+    // var myAnimation = new hoverEffect({
+    //     parent: document.querySelector('.work-img3'),
+    //     intensity: 0.3,
+    //     image1: './img/texture.jpg',
+    //     image2: './img/blog2.jpg',
+    //     displacementImage: 'https://assets.codepen.io/2621168/dis.png'
+    // });
 
     let img1 = document.querySelector('.work-img1');
     let img2 = document.querySelector('.work-img2');
@@ -58,14 +58,10 @@ let textWrapper = document.querySelector('.title-1')
     document.addEventListener('mousemove', (e) => {
         cursor.x = -e.clientX * .1;
         cursor.y = -e.clientY * .1;
-        cursor2.x = -(e.clientX - $(window).width()) * .1; 
-        cursor2.y = -e.clientY * .1;
-        cursor3.x = -e.clientX * .1;
-        cursor3.y = -e.clientY * .1;
         //img is on the left side, let the mouse reference point shift to right side
 
         img1.style.transform = `translate(${cursor.x}px, ${cursor.y}px)`;
-        img2.style.transform = `translate(${cursor2.x}px, ${cursor2.y}px)`;
-        img3.style.transform = `translate(${cursor3.x}px, ${cursor3.y}px)`;
+        img2.style.transform = `translate(${cursor.x}px, ${cursor.y}px)`;
+        img3.style.transform = `translate(${cursor.x}px, ${cursor.y}px)`;
         // cursorCircle.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`
     })
