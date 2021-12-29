@@ -41,7 +41,48 @@ nav .nav-wrap {
 
 nav .nav-wrap a {
   text-decoration: none;
+  position: relative;
   color: #22577E;
+  line-height: 1.2vw;
+}
+
+nav .nav-wrap a:before {
+  content: '';
+  position: absolute;
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+  transition: transform .5s ease, -webkit-transform .5s ease;
+}
+
+nav .nav-wrap .link-wrap:hover a {
+  color: #9ea4a8;
+}
+
+nav .nav-wrap .link-wrap:hover .link-hover:before {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+nav .nav-wrap .link-hover {
+  display: inline-block;
+  padding-bottom: 5px;
+  overflow: hidden;
+}
+
+nav .nav-wrap .link-hover:before {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #bbc2c6;
+  -webkit-transform: translateX(-110%);
+          transform: translateX(-110%);
+}
+
+nav .nav-wrap .link-hover:hover:before {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 nav .nav-wrap .nav-wrap-right {
