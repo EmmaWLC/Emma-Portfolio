@@ -9,11 +9,6 @@ body {
     margin: 0;
 }
 
-canvas {
-    margin: 0;
-    display: block;
-}
-
 .scroll-to-next-part {
     width: 100vw;
     height: 100vh;
@@ -24,66 +19,10 @@ canvas {
 }
 
 nav {
-    position: absolute;
-    width: 100vw;
-    height: 3vw;
-    font-size: 1.2vw;
-    color: #003a63;
-    font-family: 'Lato', sans-serif;
-    top: 4vw;
-    z-index: 1;
-    .nav-wrap {
-        padding: 0 4vw 0;
-        width: 100%;
-        
-        a {
-            text-decoration: none;
-            position: relative;
-            color: #22577E;
-            line-height: 1.2vw;
-            &:before {
-                content: '';
-                position: absolute;
-                transition: transform .5s ease;
-              }
-            
-        }
-        .link-wrap:hover {
-            a {
-                color: #9ea4a8;
-
-            }
-
-            .link-hover:before {
-                transform:  translateX(0);
-            }
-           
-        }
-        .link-hover {
-            display: inline-block;
-            padding-bottom: 5px;
-            overflow: hidden;
-           
-            &:before {
-                left: 0;
-                bottom: 0;
-                width: 100%;
-                height: 2px;
-                background:#bbc2c6;
-                transform:  translateX(-110%);
-            }
-            &:hover:before {
-                transform:  translateX(0);
-            }
     
-            }
-        .nav-wrap-right {
-            margin-left: auto;
-        }
-
-        
+    .nav-wrap{
+        display: none;
     }
-    
 }
 
 section {
@@ -127,12 +66,7 @@ section {
 .section2 {
     background: #102e43;
     position: relative;
-    .test {
-        width: 100px;
-        height: 100px;
-        background:rgb(247, 247, 247);
-        z-index: 1;
-    }
+    
 
     .work-wrap {
         width: 100%;
@@ -156,17 +90,16 @@ section {
         height: 100%;
         
         .work-title {
-            right: 0vw;
             transform: translateY(-30%);
             position: relative;
             z-index: 5;
             p  {
-               
                 text-align: right;
                 font-size: 10vw;
                 line-height:4vw;
                 font-family: 'Playfair Display SC', serif;
                 color: #F6F2D4;
+                right: 2vw;
             }
         }
 
@@ -174,22 +107,20 @@ section {
             p {
                 z-index: 5;
                 font-family: 'Lato', sans-serif;
-                font-size: 1vw;
-                line-height: 5vw;
+                font-size: 4vw;
                 font-weight: 300;
-                text-align: right;
-                padding-right: 3vw;
+                // padding-right: 3vw;
                 color: rgb(255, 255, 255);
-                max-width: 20vw;
+                text-align: right;
+                margin-bottom: 1vw;
             }
         }
         .work-img {
             overflow: hidden;
-            right: 0vw;
-            width: 60vw;
-            height: 80vw;
+            width: 80vw;
             background: #000;
             position: relative;
+            margin-top: 4vw;
             
 
             img {
@@ -313,7 +244,72 @@ section {
 @media (min-width: 578px) {
 
     nav {
+        position: absolute;
+        width: 100vw;
+        height: 3vw;
+        font-size: 1.2vw;
+        color: #003a63;
+        font-family: 'Lato', sans-serif;
+        top: 4vw;
+        z-index: 1;
         top: 2vw;
+        .burger {
+            display:none;
+          }
+    
+    
+        .nav-wrap {
+            display: block;
+            padding: 0 4vw 0;
+            width: 100%;
+            
+            a {
+                text-decoration: none;
+                position: relative;
+                color: #22577E;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    transition: transform .5s ease;
+                  }
+                
+            }
+            .link-wrap:hover {
+                a {
+                    color: #9ea4a8;
+    
+                }
+    
+                .link-hover:before {
+                    transform:  translateX(0);
+                }
+               
+            }
+            .link-hover {
+                display: inline-block;
+                padding-bottom: 5px;
+                overflow: hidden;
+               
+                &:before {
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 2px;
+                    background:#bbc2c6;
+                    transform:  translateX(-110%);
+                }
+                &:hover:before {
+                    transform:  translateX(0);
+                }
+        
+                }
+            .nav-wrap-right {
+                margin-left: auto;
+            }
+    
+            
+        }
+        
     }
 
     .section1 {
@@ -357,21 +353,58 @@ section {
             font-size: 5vw;
             top: 3vw;
         }
-        .work-cube{
+        .work-cube {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            z-index: 5;
+            transform: translateX(3vw);
+            
             .work-title {
+                transform: translateY(2%);
                 position: relative;
                 z-index: 5;
-                transform: translateX(3vw);
                 p  {
+                    text-align: right;
+                    font-family: 'Playfair Display SC', serif;
+                    color: #F6F2D4;
+                    right: 2vw;
                     font-size: 6vw;
                     line-height:5vw;
                 }
             }
+    
+            .work-detail {
+                p {
+                    z-index: 5;
+                    font-family: 'Lato', sans-serif;
+                    font-size: 1.2vw;
+                    line-height: 1.2vw;
+                    min-width: 21vw;
+                    font-weight: 300;
+                    text-align: right;
+                    padding-right: 3vw;
+                    color: rgb(255, 255, 255);
+                    max-width: 20vw;
+                }
+            }
             .work-img {
+                overflow: hidden;
+                right: 0vw;
+                background: #000;
+                position: relative;
+                margin-top: 0vw;
+                
                 width: 60vw;
                 height: 30vw;
                 z-index: 0;
-            }
+    
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+            }  
             .work-detail {
                 p {
                     text-align: right;
@@ -380,9 +413,8 @@ section {
                     min-width: 21vw;
                 }
             }
+            
         }
-
-       
     }
 
     .section3 {

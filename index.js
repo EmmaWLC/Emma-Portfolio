@@ -1,3 +1,10 @@
+$('.burger, .overlay').click(function(){
+    $('.burger').toggleClass('clicked');
+    $('.overlay').toggleClass('show');
+    $('nav').toggleClass('show');
+    $('body').toggleClass('overflow');
+  });
+
 
 // home title animation
     let textWrapper = document.querySelector('.title-1')
@@ -19,7 +26,6 @@
 
 //snap effect
     ScrollTrigger.defaults({
-        toggleActions: "restart none none none",
         scroller: ".scroll-to-next-part"
       });
 //work scroll effect
