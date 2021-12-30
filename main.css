@@ -130,6 +130,13 @@ section {
   position: relative;
 }
 
+.section2 .test {
+  width: 100px;
+  height: 100px;
+  background: #f7f7f7;
+  z-index: 1;
+}
+
 .section2 .work-wrap {
   width: 100%;
   height: 100%;

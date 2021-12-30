@@ -127,6 +127,12 @@ section {
 .section2 {
     background: #102e43;
     position: relative;
+    .test {
+        width: 100px;
+        height: 100px;
+        background:rgb(247, 247, 247);
+        z-index: 1;
+    }
 
     .work-wrap {
         width: 100%;
@@ -150,12 +156,10 @@ section {
         height: 100%;
         
         .work-title {
-           
             right: 0vw;
             transform: translateY(-30%);
             position: relative;
             z-index: 5;
-
             p  {
                
                 text-align: right;
