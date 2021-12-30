@@ -28,8 +28,7 @@ let tl2 = gsap.timeline({
     scrollTrigger: {
         trigger: ".section2-0",
         toggleActions: "restart pause restart pause",
-        start: "top center", 
-        markers: true
+        start: "top center"
       }
 });
 
@@ -43,8 +42,7 @@ let tl3 = gsap.timeline({
     scrollTrigger: {
         trigger: ".section2-1",
         toggleActions: "restart pause restart pause",
-        start: "top center", 
-        markers: true
+        start: "top center"
       }
 });
 
@@ -57,8 +55,7 @@ let tl4 = gsap.timeline({
     scrollTrigger: {
         trigger: ".section2-2",
         toggleActions: "restart pause restart pause",
-        start: "top center", 
-        markers: true
+        start: "top center"
       }
 });
 
